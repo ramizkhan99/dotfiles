@@ -13,6 +13,9 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'ellisonleao/glow.nvim'
+Plug 'vimwiki/vimwiki'
+Plug 'ap/vim-css-color'
 
 call plug#end()
 
