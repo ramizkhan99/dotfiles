@@ -39,7 +39,10 @@ polybar -c ~/.config/polybar/mycustom/config.ini eDP-1 &
 ~/.screenlayout/setup2.sh
 
 # Picom launch
-picom --experimental-backends
+picom --experimental-backends &
+
+# Autolock with xautolock and i3lock
+xautolock -time 10 -notify 30 -notifier 'notify-send "Lock" "Your pc will lock in 30s"' -locker 'i3lock-fancy-multimonitor -n -b=0x16'
 
 # Setup wallpaper with feh
-feh --bg-fill ~/Pictures/wallpaper1.jpg
+feh --bg-fill ~/Pictures/wallpaper4.jpg &

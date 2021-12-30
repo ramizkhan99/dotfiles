@@ -11,4 +11,5 @@ cp ~/.zshrc ./zsh
 cp ~/.config/bspwm/** ./bspwm
 cp ~/.config/picom/picom.conf ./picom
 cp ~/.config/alacritty/alacritty.yml ./alacritty
+cp ~/.config/dunst/dunstrc ./dunst
 
