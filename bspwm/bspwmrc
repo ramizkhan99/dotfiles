@@ -6,9 +6,9 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 bspc monitor HDMI-1 -d I II III IV V 
 bspc monitor eDP-1 -d VI VII VIII IX X
 
-bspc config border_width		4
+bspc config border_width		2
 bspc config window_gap			10
-bspc config top_padding			45
+bspc config top_padding			50
 bspc config bottom_padding		10
 bspc config left_padding		10
 bspc config right_padding		10
@@ -36,13 +36,17 @@ polybar -c ~/.config/polybar/mycustom/config.ini HDMI-1 &
 polybar -c ~/.config/polybar/mycustom/config.ini eDP-1 &
 
 # Multi-monitor setup config
-~/.screenlayout/setup2.sh
+~/.screenlayout/setup2.sh &
 
 # Picom launch
 picom --experimental-backends &
 
-# Autolock with xautolock and i3lock
-xautolock -time 10 -notify 30 -notifier 'notify-send "Lock" "Your pc will lock in 30s"' -locker 'i3lock-fancy-multimonitor -n -b=0x16'
-
 # Setup wallpaper with feh
 feh --bg-fill ~/Pictures/wallpaper4.jpg &
+
+# Autolock with xautolock and i3lock
+xautolock -time 10 -notify 30 -notifier 'notify-send "Lock" "Your pc will lock in 30s"' -locker 'i3lock-fancy-multimonitor -n -b=0x16' &
+
+
+# Application specific rules
+bspc rule -a feh state=floating

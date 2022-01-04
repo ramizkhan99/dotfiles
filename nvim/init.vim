@@ -5,12 +5,15 @@ Plug 'preservim/nerdcommenter'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'ryanoasis/vim-devicons'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'ful1e5/onedark.nvim'
-Plug 'ayu-theme/ayu-vim'
-Plug 'morhetz/gruvbox'
+Plug 'luisiacc/gruvbox-baby', {'branch': 'main'}
+"Plug 'ful1e5/onedark.nvim'
+"Plug 'ayu-theme/ayu-vim'
+"Plug 'morhetz/gruvbox'
 Plug 'vim-scripts/delimitMate.vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ellisonleao/glow.nvim'
@@ -34,7 +37,7 @@ syntax on
 "\ }
 
 " Load the colorscheme
-colorscheme gruvbox
+colorscheme gruvbox-baby
 "autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 "autocmd vimenter * hi NonText guibg=NONE ctermbg=NONE
 
@@ -66,7 +69,7 @@ set incsearch
 
 set cursorline
 "set wildmode=longest,list
-"set cc=80
+set cc=80
 
 set clipboard=unnamedplus
 
@@ -93,6 +96,10 @@ let mapleader = " "
 nnoremap <silent><leader>f :Files<CR>
 nnoremap <silent><C-f> :Rg<CR>
 nnoremap <silent><leader>t :NERDTreeToggle<CR>
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 let g:airline_powerline_fonts = 1
 

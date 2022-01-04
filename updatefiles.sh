@@ -6,6 +6,7 @@
 
 cp ~/.config/nvim/** ./nvim/
 cp ~/.config/polybar/mycustom/config.ini ./polybar/config.ini
+cp ~/.config/polybar/modules/** ./polybar/modules
 cp -r ~/.config/rofi/** ./rofi
 cp ~/.zshrc ./zsh
 cp ~/.config/bspwm/** ./bspwm
