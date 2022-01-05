@@ -5,7 +5,8 @@ Plug 'preservim/nerdcommenter'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'ryanoasis/vim-devicons'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'luisiacc/gruvbox-baby', {'branch': 'main'}
+Plug 'sainnhe/gruvbox-material'
+"Plug 'luisiacc/gruvbox-baby', {'branch': 'main'}
 "Plug 'ful1e5/onedark.nvim'
 "Plug 'ayu-theme/ayu-vim'
 "Plug 'morhetz/gruvbox'
@@ -25,22 +26,15 @@ call plug#end()
 if (has("termguicolors"))
 	set termguicolors
 endif
-syntax on
-"let g:onedark_function_style = "italic"
-"let g:onedark_transparent = 1
-"let g:onedark_highlight_linenumber = 1
-
-" Change the "hint" color to the "orange" color, and make the "error" color bright red
-"let g:onedark_colors = {
-  "\ 'hint': 'orange',
-  "\ 'error': '#ff0000'
-"\ }
 
 " Load the colorscheme
-colorscheme gruvbox-baby
+let g:gruvbox_material_background = 'soft'
+let g:gruvbox_material_enable_italic = 1
+colorscheme gruvbox-material
 "autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 "autocmd vimenter * hi NonText guibg=NONE ctermbg=NONE
 
+syntax on
 set rnu
 set splitright
 set splitbelow

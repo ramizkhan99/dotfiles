@@ -32,7 +32,7 @@ bspc config presel_feedback_color	"#a89984"
 
 # Polybar config
 killall -q polybar
-polybar -c ~/.config/polybar/mycustom/config.ini HDMI-1 &
+polybar -c ~/.config/polybar/mycustom/config.ini external &
 polybar -c ~/.config/polybar/mycustom/config.ini eDP-1 &
 
 # Multi-monitor setup config
